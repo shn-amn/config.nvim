@@ -1,0 +1,45 @@
+---@module 'lazy'
+---@type LazySpec
+return {
+  'nvim-tree/nvim-tree.lua',
+  config = function()
+    require('nvim-tree').setup {
+      view = {
+        float = {
+          enable = true,
+          open_win_config = {
+            relative = 'editor',
+            width = 60,
+            height = 30,
+            row = 3,
+            col = 30,
+          },
+        },
+      },
+      renderer = {
+        icons = {
+          glyphs = {
+            git = {
+              ignored = '󰄵', -- 󰄴
+              untracked = '󰄱', -- 󰄰
+              unstaged = '󰄱',
+              staged = '󰄵',
+              deleted = '',
+              renamed = '󰈆',
+              unmerged = '󰆕',
+            },
+            folder = {
+              default = '',
+              open = '',
+              empty = '',
+              empty_open = '',
+              arrow_closed = '󰁔',
+              arrow_open = '󰁅', -- or "⌵"
+            },
+          },
+        },
+      },
+    }
+    vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeFindFileToggle<cr>', { desc = 'Explorer (Float)' })
+  end,
+}
