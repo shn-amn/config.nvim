@@ -5,7 +5,7 @@ return {
   lazy = false,
   priority = 1000,
   dev = true,
-  dependencies = { 'rktjmp/lush.nvim' }, -- The manager handles this
+  dependencies = { 'rktjmp/lush.nvim' },
   config = function()
     vim.cmd 'colorscheme mostly-monochrome'
     vim.api.nvim_create_autocmd('VimEnter', {

@@ -2,6 +2,9 @@
 ---@type LazySpec
 return {
   'nvim-tree/nvim-tree.lua',
+  dependencies = {
+    'nvim-tree/nvim-web-devicons'
+  },
   config = function()
     require('nvim-tree').setup {
       view = {
@@ -20,21 +23,21 @@ return {
         icons = {
           glyphs = {
             git = {
-              ignored = '󰄵', -- 󰄴
-              untracked = '󰄱', -- 󰄰
-              unstaged = '󰄱',
-              staged = '󰄵',
+              ignored = '󰄴', -- 󰄴 󰄵
+              untracked = '󰄰', -- 󰄰 󰄱 󰄯
+              unstaged = '󰄯',
+              staged = '󰄴',
               deleted = '',
               renamed = '󰈆',
               unmerged = '󰆕',
             },
             folder = {
-              default = '',
-              open = '',
-              empty = '',
-              empty_open = '',
-              arrow_closed = '󰁔',
-              arrow_open = '󰁅', -- or "⌵"
+              default = '', --  
+              open = '', --  
+              empty = '', -- 
+              empty_open = '', -- 
+              arrow_closed = '', -- 󰁔 
+              arrow_open = '', -- 󰁅  ⌵
             },
           },
         },
