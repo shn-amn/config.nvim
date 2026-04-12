@@ -7,16 +7,16 @@ return {
     gitsigns.setup {
       ---@diagnostic disable: missing-fields
       signs = {
-        add = { text = '█' },
-        change = { text = '█' },
+        add = { text = '▌' },
+        change = { text = '▌' },
         delete = { text = '▁' },
         topdelete = { text = '▔' },
         changedelete = { text = '▚' },
         untracked = { text = '▎' },
       },
       signs_staged = {
-        add = { text = '█' },
-        change = { text = '█' },
+        add = { text = '▌' },
+        change = { text = '▌' },
         delete = { text = '▁' },
         topdelete = { text = '▔' },
         changedelete = { text = '▚' },
