@@ -6,5 +6,12 @@ return {
   priority = 1000,
   dev = true,
   dependencies = { 'rktjmp/lush.nvim' }, -- The manager handles this
-  config = function() vim.cmd 'colorscheme mostly-monochrome' end,
+  config = function()
+    vim.cmd 'colorscheme mostly-monochrome'
+    vim.api.nvim_create_autocmd('VimEnter', {
+      callback = function()
+        vim.cmd 'colorscheme mostly-monochrome'
+      end,
+    })
+  end,
 }
