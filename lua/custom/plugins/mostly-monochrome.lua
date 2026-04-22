@@ -10,7 +10,9 @@ return {
     vim.cmd 'colorscheme mostly-monochrome'
     vim.api.nvim_create_autocmd('VimEnter', {
       callback = function()
-        vim.cmd 'colorscheme mostly-monochrome'
+        vim.schedule(function ()
+          vim.cmd 'colorscheme mostly-monochrome'
+        end)
       end,
     })
   end,
