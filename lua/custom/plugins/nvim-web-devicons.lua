@@ -8,6 +8,7 @@ return {
         color_icons = true,
         default = true,
       }
+      vim.api.nvim_del_augroup_by_name 'NvimWebDevicons'
     end,
   },
 }
