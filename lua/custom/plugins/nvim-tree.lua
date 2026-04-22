@@ -23,21 +23,21 @@ return {
         icons = {
           glyphs = {
             git = {
-              ignored = '󰄴', -- 󰄴 󰄵
-              untracked = '󰄰', -- 󰄰 󰄱 󰄯
+              ignored = '󰅚', -- 󰅙 󰅚
+              untracked = '󰄯', -- 󰄰 󰄱 󰄯
               unstaged = '󰄯',
-              staged = '󰄴',
-              deleted = '',
+              staged = '󰄴', -- 󰄴 󰄵
+              deleted = '󰅙',
               renamed = '󰈆',
               unmerged = '󰆕',
             },
             folder = {
-              default = '', --  
-              open = '', --  
-              empty = '', -- 
-              empty_open = '', -- 
-              arrow_closed = '', -- 󰁔 
-              arrow_open = '', -- 󰁅  ⌵
+              default = '', --  
+              open = '', --  
+              empty = '', -- 
+              empty_open = '', -- 
+              arrow_closed = ' ', -- 󰁔 
+              arrow_open = ' ', -- 󰁅  ⌵
             },
           },
         },
