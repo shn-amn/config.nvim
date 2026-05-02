@@ -565,6 +565,9 @@ require('lazy').setup({
           map('grk', function() vim.lsp.buf.hover({ border = 'rounded' }) end, 'Hover')
           map('K', function() vim.lsp.buf.hover({ border = 'rounded' }) end, 'Hover')
 
+          -- Signature help
+          map('<C-s>', function() vim.lsp.buf.signature_help({ border = 'rounded' }) end, '[S]ignature help', { 'i' })
+
           -- The following two autocommands are used to highlight references of the
           -- word under your cursor when your cursor rests there for a little while.
           --    See `:help CursorHold` for information about when this is executed
@@ -802,7 +805,10 @@ require('lazy').setup({
       fuzzy = { implementation = 'lua' },
 
       -- Shows a signature help window while you type arguments for a function
-      signature = { enabled = true },
+      signature = {
+        enabled = true,
+        window = { border = 'rounded' },
+      },
     },
   },
 
