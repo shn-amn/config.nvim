@@ -3,10 +3,14 @@
 return {
   'nvim-tree/nvim-tree.lua',
   dependencies = {
-    'nvim-tree/nvim-web-devicons'
+    'nvim-tree/nvim-web-devicons',
   },
   config = function()
     require('nvim-tree').setup {
+      sort = {
+        sorter = 'extension',
+        folders_first = true,
+      },
       view = {
         float = {
           enable = true,
@@ -20,6 +24,7 @@ return {
         },
       },
       renderer = {
+        group_empty = true,
         icons = {
           glyphs = {
             git = {

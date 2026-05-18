@@ -12,7 +12,7 @@ return {
         delete = { text = '▁' },
         topdelete = { text = '▔' },
         changedelete = { text = '▚' },
-        untracked = { text = '▎' },
+        untracked = { text = '▌' },
       },
       signs_staged = {
         add = { text = '▌' },
