@@ -292,7 +292,8 @@ require('lazy').setup({
       },
     },
   },
-  ]]--
+  ]]
+  --
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
@@ -562,11 +563,11 @@ require('lazy').setup({
           map('grD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
           -- Hover
-          map('grk', function() vim.lsp.buf.hover({ border = 'rounded' }) end, 'Hover')
-          map('K', function() vim.lsp.buf.hover({ border = 'rounded' }) end, 'Hover')
+          map('grk', function() vim.lsp.buf.hover { border = 'rounded' } end, 'Hover')
+          map('K', function() vim.lsp.buf.hover { border = 'rounded' } end, 'Hover')
 
           -- Signature help
-          map('<C-s>', function() vim.lsp.buf.signature_help({ border = 'rounded' }) end, '[S]ignature help', { 'i' })
+          map('<C-s>', function() vim.lsp.buf.signature_help { border = 'rounded' } end, '[S]ignature help', { 'i' })
 
           -- The following two autocommands are used to highlight references of the
           -- word under your cursor when your cursor rests there for a little while.
